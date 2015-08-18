@@ -37,11 +37,13 @@
 .profile {
 	width: 30%;
 	float: left;
+	padding-left: 20px;
 }
 
 .challenges {
 	width: 70%;
 	float: right;
+	margin-right: 20px;
 
 	.list-group {
 		padding-left: 20px;
@@ -60,3 +62,27 @@
 		box-sizing: border-box;
 	}
 }
+
+.box-field {
+	padding: 20px;  
+	background: white;
+	color: black;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.center-text {
+	text-align: center;
+}
+
+.user-profile {  
+	width: 90%;
+	height: 100%;
+}
+
+.user-panel {
+	width: 90%;
+	height: 100%;
+	margin-top: 20px;
+}
+
+

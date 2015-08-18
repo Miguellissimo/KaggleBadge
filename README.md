@@ -9,4 +9,6 @@ The latest deployed version can be found under https://kaggle-badge.herokuapp.co
 ### Development
 I am not a web developer and this is my first project to get familiar with ruby on rails and web programming. Actually it is used as a testproject and  a preparation for a university course called *agile web development*. 
 
+The current status is: [![Build Status](https://travis-ci.org/Miguellissimo/KaggleBadge.svg?branch=master)](https://travis-ci.org/Miguellissimo/KaggleBadge)
+
 If you would like to contribute, feel free to fork the repository and submit your changes as pull requests. Thanks in advance :kissing_closed_eyes:

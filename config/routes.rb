@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
   get 'challenges/new'
-
   get 'users/show'
-
   get 'users/new'
-
   root 'static_pages#home'
+  get 'signup' => 'static_pages#signup'
   get 'about' => 'static_pages#about'
   resources :users
 

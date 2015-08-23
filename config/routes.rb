@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
+  post 'challenges' => "challenges#create"
   get 'challenges/new'
   get 'users/show'
   get 'users/new'

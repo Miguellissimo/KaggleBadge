@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @challenges = Challenge.where(:team_id => params[:id])
+    @new_challenge = Challenge.new
+    @challenges = Challenge.where(:user_id => params[:id])
   end
 
   private

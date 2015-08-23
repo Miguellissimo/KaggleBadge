@@ -1,5 +1,6 @@
 class Challenge < ActiveRecord::Base
-  validates :name, presence: true, length: {maximum: 255}, uniqueness: true
-  validates :team_id, presence: true
-  validates :image, length: {maximum: 2048}
+  belongs_to :user
+  validates :team_name, presence: true, length: {maximum: 255}
+  validates :link, presence: true, uniqueness: true
+  #validates :team_id, presence: true
 end

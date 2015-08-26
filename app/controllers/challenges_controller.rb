@@ -5,7 +5,10 @@ class ChallengesController < ApplicationController
   def create
     if logged_in?
       @challenge = current_user.challenges.build(challenge_params)
-      @challenge.name = competition_name ''
+
+      # Extracting the competition name
+      @challenge.name = 'Extracting challenge name ...'
+      Delayed::Job.enqueue(CompetitionNameJob.new(@challenge.link, current_user.id))      
       @challenge.save
     end 
 
@@ -18,6 +21,8 @@ private
   end
 
   def competition_name(link)
-    'Not yet implemented'
+    challenge_substring = link["https://www.kaggle.com".length..-1]
+    html_content = Nokogiri::HTML(open(link))
+    html_content.xpath("string(//div[contains(@id, 'comp-header-details')]/descendant::a[contains(@href, '#{challenge_substring}')][2])")
   end
 end

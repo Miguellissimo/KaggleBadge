@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ChallengeTest < ActiveSupport::TestCase
   def setup
-    @c = Challenge.new(team_id: 1, name: "https://www.kaggle.com/c/titanic", image: "base64_image")
+    @c = Challenge.new(team_name: 'Example', link: "https://www.kaggle.com/c/titanic", image: "base64_image", name: 'Example name', user_id: 1)
   end
 
   test "challenge name is not blank" do
